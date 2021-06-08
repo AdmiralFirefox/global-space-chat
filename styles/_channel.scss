@@ -1,0 +1,43 @@
+@use "themeprovider/themeprovider" as theme;
+
+.bg-dark {
+  background: theme.$bg-dark;
+  transition: background theme.$transition-duration ease-in-out;
+}
+
+.bg-light {
+  background: theme.$bg-light;
+  transition: background theme.$transition-duration ease-in-out;
+}
+
+.channel-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.channel-content {
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 45em);
+
+  .channel-form-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .channel-messages-dark {
+    background: theme.$chat-content-dark;
+    transition: background theme.$transition-duration ease-in-out;
+    height: 75vh;
+    margin-top: 1.5em;
+    overflow: auto;
+  }
+
+  .channel-messages-light {
+    background: theme.$chat-content-light;
+    transition: background theme.$transition-duration ease-in-out;
+    height: 75vh;
+    margin-top: 1.5em;
+    overflow: auto;
+  }
+}

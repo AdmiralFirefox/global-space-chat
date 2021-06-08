@@ -1,0 +1,67 @@
+@use "themeprovider/themeprovider" as theme;
+
+.initializing-wrapper-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: theme.$bg-dark;
+
+  .initializing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: theme.$modal-content-dark;
+    padding: 2em;
+    width: min(80%, 30em);
+
+    .initializing-title {
+      text-align: center;
+      margin-top: 2em;
+
+      h1 {
+        color: theme.$font-color-dark;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+      }
+
+      @supports not (font-size: clamp(1.4rem, 3vw, 1.9rem)) {
+        h1 {
+          font-size: min(8vw, 1.9rem);
+        }
+      }
+    }
+  }
+}
+
+.initializing-wrapper-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: theme.$bg-light;
+
+  .initializing-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: theme.$modal-content-light;
+    padding: 2em;
+    width: min(80%, 30em);
+
+    .initializing-title {
+      text-align: center;
+      margin-top: 2em;
+
+      h1 {
+        color: theme.$font-color-light;
+        font-size: clamp(1.4rem, 3vw, 1.9rem);
+      }
+
+      @supports not (font-size: clamp(1.4rem, 3vw, 1.9rem)) {
+        h1 {
+          font-size: min(8vw, 1.9rem);
+        }
+      }
+    }
+  }
+}

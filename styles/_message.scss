@@ -1,0 +1,163 @@
+@use "themeprovider/themeprovider" as theme;
+
+//Dark Mode User Message Content
+.user-message-wrapper-dark {
+  display: flex;
+  padding-top: 1em;
+  transition: background theme.$transition-duration ease-in-out;
+  @include theme.message-animation();
+
+  .user-avatar {
+    margin-left: 0.8em;
+    img {
+      width: 3em;
+      border-radius: 50px;
+    }
+  }
+
+  .user-message-content {
+    margin-left: 0.8em;
+
+    .user-info-display {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .user-name {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-weight: bold;
+        color: theme.$font-color-dark;
+        transition: color theme.$transition-duration ease-in-out;
+      }
+
+      @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+        .user-name {
+          font-size: min(5.5vw, 1.1rem);
+        }
+      }
+
+      .user-message-time-sent {
+        font-size: 0.8rem;
+        color: theme.$font-time-color-dark;
+        transition: color theme.$transition-duration ease-in-out;
+      }
+    }
+
+    .user-message {
+      margin-top: 0.25em;
+      padding-bottom: 1em;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      color: theme.$font-color-dark;
+      word-break: break-word;
+      padding-right: 1em;
+      line-height: 1.55em;
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+      .user-message {
+        font-size: min(5.5vw, 1.1rem);
+      }
+    }
+  }
+
+  &:hover {
+    background: theme.$chat-hover-background-dark;
+    transition: background theme.$transition-duration ease-in-out;
+  }
+}
+
+//Light Mode User Message Content
+.user-message-wrapper-light {
+  display: flex;
+  padding-top: 1em;
+  transition: background theme.$transition-duration ease-in-out;
+  @include theme.message-animation();
+
+  .user-avatar {
+    margin-left: 0.8em;
+    img {
+      width: 3em;
+      border-radius: 50px;
+    }
+  }
+
+  .user-message-content {
+    margin-left: 0.8em;
+
+    .user-info-display {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .user-name {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-weight: bold;
+        color: theme.$font-color-light;
+        transition: color theme.$transition-duration ease-in-out;
+      }
+
+      @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+        .user-name {
+          font-size: min(5.5vw, 1.1rem);
+        }
+      }
+
+      .user-message-time-sent {
+        font-size: 0.8rem;
+        color: theme.$font-time-color-light;
+        transition: color theme.$transition-duration ease-in-out;
+      }
+    }
+
+    .user-message {
+      margin-top: 0.25em;
+      padding-bottom: 1em;
+      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      color: theme.$font-color-light;
+      word-break: break-word;
+      padding-right: 1em;
+      line-height: 1.55em;
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+      .user-message {
+        font-size: min(5.5vw, 1.1rem);
+      }
+    }
+  }
+
+  &:hover {
+    background: theme.$chat-hover-background-light;
+    transition: background theme.$transition-duration ease-in-out;
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .user-message-wrapper-dark {
+    .user-message-content {
+      .user-info-display {
+        flex-direction: row;
+        align-items: center;
+
+        .user-message-time-sent {
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+
+  .user-message-wrapper-light {
+    .user-message-content {
+      .user-info-display {
+        flex-direction: row;
+        align-items: center;
+
+        .user-message-time-sent {
+          margin-left: 0.5em;
+        }
+      }
+    }
+  }
+}

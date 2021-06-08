@@ -1,0 +1,98 @@
+@use "themeprovider/themeprovider" as theme;
+
+.bg-sign-in {
+  background: url("../assets/sign-in-bg.jpg"), theme.$linear-gradient;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+}
+
+.sign-in-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 4em auto;
+}
+
+.sign-in-content-dark {
+  background: theme.$sign-in-content-dark;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  width: min(80%, 28em);
+  transition: background theme.$transition-duration ease-in-out;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.5);
+
+  .sign-in-logo {
+    @include theme.rotate-animate();
+  }
+
+  .sign-in-title {
+    margin-top: 0.5em;
+
+    h1 {
+      color: theme.$font-color-dark;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    @supports not (font-size: clamp(1.4rem, 3vw, 2rem)) {
+      h1 {
+        font-size: min(8.5vw, 2rem);
+      }
+    }
+  }
+
+  .sign-in-darkmode-toggle {
+    margin-top: 4em;
+  }
+}
+
+.sign-in-content-light {
+  background: theme.$sign-in-content-light;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em;
+  width: min(80%, 28em);
+  transition: background theme.$transition-duration ease-in-out;
+  box-shadow: 5px 10px 20px 1px rgba(0, 0, 0, 0.5);
+
+  .sign-in-logo {
+    @include theme.rotate-animate();
+  }
+
+  .sign-in-title {
+    margin-top: 0.5em;
+
+    h1 {
+      color: theme.$font-color-light;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      transition: color theme.$transition-duration ease-in-out;
+    }
+
+    @supports not (font-size: clamp(1.4rem, 3vw, 2rem)) {
+      h1 {
+        font-size: min(8.5vw, 2rem);
+      }
+    }
+  }
+
+  .sign-in-darkmode-toggle {
+    margin-top: 4em;
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .sign-in-wrapper {
+    height: 100vh;
+    margin: 0em;
+  }
+}

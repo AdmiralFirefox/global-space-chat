@@ -1,0 +1,123 @@
+@use "../themeprovider/themeprovider" as theme;
+
+.navbar-content-dark {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: theme.$app-bar-dark;
+  padding: 0.3em 0.6em;
+  transition: background theme.$transition-duration ease-in-out;
+
+  .navbar-title {
+    display: flex;
+    align-items: center;
+
+    .navbar-logo {
+      @include theme.rotate-animate();
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-left: 0.5em;
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
+    }
+
+    @supports not (font-size: clamp(1.1rem, 4vw, 1.6rem)) {
+      h1 {
+        font-size: min(6vw, 1.5rem);
+      }
+    }
+  }
+
+  .navbar-items {
+    display: flex;
+    align-items: center;
+
+    .navbar-items-user {
+      display: none;
+    }
+  }
+}
+
+.navbar-content-light {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: theme.$app-bar-light;
+  padding: 0.3em 0.6em;
+  transition: background theme.$transition-duration ease-in-out;
+
+  .navbar-title {
+    display: flex;
+    align-items: center;
+
+    .navbar-logo {
+      @include theme.rotate-animate();
+    }
+
+    h1 {
+      color: #ffffff;
+      margin-left: 0.5em;
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
+    }
+
+    @supports not (font-size: clamp(1.1rem, 4vw, 1.6rem)) {
+      h1 {
+        font-size: min(6vw, 1.5rem);
+      }
+    }
+  }
+
+  .navbar-items {
+    display: flex;
+    align-items: center;
+
+    .navbar-items-user {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: theme.$media-query-value) {
+  .navbar-content-dark {
+    padding: 0.45em 1.5em;
+
+    .navbar-title {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .navbar-items {
+      .nav-icon {
+        display: none;
+      }
+
+      .navbar-items-user {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .navbar-content-light {
+    padding: 0.45em 1.5em;
+
+    .navbar-title {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .navbar-items {
+      .nav-icon {
+        display: none;
+      }
+
+      .navbar-items-user {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

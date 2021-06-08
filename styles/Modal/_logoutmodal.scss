@@ -1,0 +1,73 @@
+@use "../themeprovider/themeprovider" as theme;
+
+.modal-content-wrapper {
+  position: relative;
+  top: 50%;
+  @include theme.modal-animation();
+}
+
+.modal-content-dark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: theme.$modal-content-dark;
+  padding: 2em;
+  width: min(80%, 30em);
+  text-align: center;
+  outline: none !important;
+
+  .modal-button-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  h1 {
+    color: theme.$font-color-dark;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+  }
+
+  @supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+    h1 {
+      font-size: min(9vw, 1.8rem);
+    }
+  }
+}
+
+.modal-content-light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: theme.$modal-content-light;
+  padding: 2em;
+  width: min(80%, 30em);
+  text-align: center;
+  outline: none !important;
+
+  .modal-button-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1em;
+    margin-top: 1.5em;
+  }
+
+  h1 {
+    color: theme.$font-color-light;
+    font-size: clamp(1.7rem, 3vw, 2.2rem);
+  }
+
+  @supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+    h1 {
+      font-size: min(9vw, 1.8rem);
+    }
+  }
+}
