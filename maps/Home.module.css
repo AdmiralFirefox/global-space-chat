@@ -240,9 +240,9 @@
 }
 .modal-content-dark h1 {
   color: #ffffff;
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
 }
-@supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+@supports not (font-size: clamp(1.8rem, 3vw, 2.2rem)) {
   .modal-content-dark h1 {
     font-size: min(9vw, 1.8rem);
   }
@@ -270,9 +270,9 @@
 }
 .modal-content-light h1 {
   color: #000000;
-  font-size: clamp(1.7rem, 3vw, 2.2rem);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
 }
-@supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+@supports not (font-size: clamp(1.8rem, 3vw, 2.2rem)) {
   .modal-content-light h1 {
     font-size: min(9vw, 1.8rem);
   }

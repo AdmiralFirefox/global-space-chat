@@ -29,10 +29,10 @@
 
   h1 {
     color: theme.$font-color-dark;
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
   }
 
-  @supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+  @supports not (font-size: clamp(1.8rem, 3vw, 2.2rem)) {
     h1 {
       font-size: min(9vw, 1.8rem);
     }
@@ -62,10 +62,10 @@
 
   h1 {
     color: theme.$font-color-light;
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.2rem);
   }
 
-  @supports not (font-size: clamp(1.7rem, 3vw, 2.2rem)) {
+  @supports not (font-size: clamp(1.8rem, 3vw, 2.2rem)) {
     h1 {
       font-size: min(9vw, 1.8rem);
     }
