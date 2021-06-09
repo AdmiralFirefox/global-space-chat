@@ -44,7 +44,7 @@ function LogOutModal({ openModal, handleClose, signOut }) {
               : modalStyles["modal-content-dark"]
           }
         >
-          <h1>Are you sure you want to logout?</h1>
+          <h1>Are you sure you want to log out?</h1>
           <div className={modalStyles["modal-button-wrapper"]}>
             <div>
               <YesButton variant="contained" onClick={signOut}>
