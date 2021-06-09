@@ -8,7 +8,6 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import Sunlight from "../../assets/sunlight.svg";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import Image from "next/image";
 import navbarContentStyles from "../../styles/Home.module.scss";
 
 const useStyles = makeStyles({
@@ -66,18 +65,18 @@ export default function NavBarContent({ handleOpen }) {
         <div>
           <IconButton style={{ marginTop: "0.15em" }} onClick={toggleDarkMode}>
             {darkMode ? (
-              <Image
+              <img
                 src={MoonDark}
                 alt="Toggle Dark Mode Logo"
-                width={35}
-                height={35}
+                width="35"
+                height="35"
               />
             ) : (
-              <Image
+              <img
                 src={Sunlight}
                 alt="Toggle Dark Mode Logo"
-                width={35}
-                height={35}
+                width="35"
+                height="35"
               />
             )}
           </IconButton>

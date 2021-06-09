@@ -24,37 +24,40 @@
       align-items: flex-start;
 
       .user-name {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: clamp(1rem, 3vw, 1.15rem);
+        word-break: break-word;
+        padding-right: 2.8em;
         font-weight: bold;
-        color: theme.$font-color-dark;
+        color: #fafafa;
         transition: color theme.$transition-duration ease-in-out;
       }
 
-      @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+      @supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
         .user-name {
           font-size: min(5.5vw, 1.1rem);
         }
       }
 
       .user-message-time-sent {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: theme.$font-time-color-dark;
         transition: color theme.$transition-duration ease-in-out;
+        align-self: flex-start;
       }
     }
 
     .user-message {
-      margin-top: 0.25em;
+      margin-top: 0.5em;
       padding-bottom: 1em;
-      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      font-size: clamp(1rem, 3vw, 1.15rem);
       color: theme.$font-color-dark;
       word-break: break-word;
-      padding-right: 1em;
+      padding-right: 1.1em;
       line-height: 1.55em;
       transition: color theme.$transition-duration ease-in-out;
     }
 
-    @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+    @supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
       .user-message {
         font-size: min(5.5vw, 1.1rem);
       }
@@ -91,37 +94,40 @@
       align-items: flex-start;
 
       .user-name {
-        font-size: clamp(0.9rem, 3vw, 1.1rem);
+        font-size: clamp(1rem, 3vw, 1.15rem);
+        word-break: break-word;
+        padding-right: 2.8em;
         font-weight: bold;
         color: theme.$font-color-light;
         transition: color theme.$transition-duration ease-in-out;
       }
 
-      @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+      @supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
         .user-name {
           font-size: min(5.5vw, 1.1rem);
         }
       }
 
       .user-message-time-sent {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: theme.$font-time-color-light;
         transition: color theme.$transition-duration ease-in-out;
+        align-self: flex-start;
       }
     }
 
     .user-message {
-      margin-top: 0.25em;
+      margin-top: 0.5em;
       padding-bottom: 1em;
-      font-size: clamp(0.9rem, 3vw, 1.1rem);
+      font-size: clamp(1rem, 3vw, 1.15rem);
       color: theme.$font-color-light;
       word-break: break-word;
-      padding-right: 1em;
+      padding-right: 1.1em;
       line-height: 1.55em;
       transition: color theme.$transition-duration ease-in-out;
     }
 
-    @supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+    @supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
       .user-message {
         font-size: min(5.5vw, 1.1rem);
       }
@@ -141,9 +147,18 @@
         flex-direction: row;
         align-items: center;
 
+        .user-name {
+          padding-right: 0em;
+        }
+
         .user-message-time-sent {
           margin-left: 0.5em;
+          align-self: center;
         }
+      }
+
+      .user-message {
+        margin-top: 0.3em;
       }
     }
   }
@@ -154,9 +169,18 @@
         flex-direction: row;
         align-items: center;
 
+        .user-name {
+          padding-right: 0em;
+        }
+
         .user-message-time-sent {
           margin-left: 0.5em;
+          align-self: center;
         }
+      }
+
+      .user-message {
+        margin-top: 0.3em;
       }
     }
   }

@@ -7,7 +7,6 @@ import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import LogOutModal from "../Modal/LogOutModal";
 import IconButton from "@material-ui/core/IconButton";
-import Image from "next/image";
 import { DarkModeContext, ToggleDarkModeContext } from "../../pages/_app";
 import navStyles from "../../styles/Home.module.scss";
 
@@ -51,11 +50,11 @@ function Navbar({ signOut }) {
         signOut={signOut}
       />
       <div className={navStyles["navbar-title"]}>
-        <Image
+        <img
           src={WebLogo}
           alt="Web Logo"
-          width={45}
-          height={45}
+          width="45"
+          height="45"
           className={navStyles["navbar-logo"]}
         />
         <h1>Global Space Chat</h1>
@@ -64,18 +63,18 @@ function Navbar({ signOut }) {
         <div className={navStyles["navbar-items-user"]}>
           <IconButton onClick={toggleDarkMode}>
             {darkMode ? (
-              <Image
+              <img
                 src={MoonDark}
                 alt="Toggle Dark Mode Logo"
-                width={35}
-                height={35}
+                width="35"
+                height="35"
               />
             ) : (
-              <Image
+              <img
                 src={Sunlight}
                 alt="Toggle Dark Mode Logo"
-                width={35}
-                height={35}
+                width="35"
+                height="35"
               />
             )}
           </IconButton>

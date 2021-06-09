@@ -301,32 +301,35 @@
   align-items: flex-start;
 }
 .user-message-wrapper-dark .user-message-content .user-info-display .user-name {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  word-break: break-word;
+  padding-right: 2.8em;
   font-weight: bold;
-  color: #ffffff;
+  color: #fafafa;
   transition: color 0.35s ease-in-out;
 }
-@supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+@supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
   .user-message-wrapper-dark .user-message-content .user-info-display .user-name {
     font-size: min(5.5vw, 1.1rem);
   }
 }
 .user-message-wrapper-dark .user-message-content .user-info-display .user-message-time-sent {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #d0ccd0;
   transition: color 0.35s ease-in-out;
+  align-self: flex-start;
 }
 .user-message-wrapper-dark .user-message-content .user-message {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
   padding-bottom: 1em;
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(1rem, 3vw, 1.15rem);
   color: #ffffff;
   word-break: break-word;
-  padding-right: 1em;
+  padding-right: 1.1em;
   line-height: 1.55em;
   transition: color 0.35s ease-in-out;
 }
-@supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+@supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
   .user-message-wrapper-dark .user-message-content .user-message {
     font-size: min(5.5vw, 1.1rem);
   }
@@ -359,32 +362,35 @@
   align-items: flex-start;
 }
 .user-message-wrapper-light .user-message-content .user-info-display .user-name {
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(1rem, 3vw, 1.15rem);
+  word-break: break-word;
+  padding-right: 2.8em;
   font-weight: bold;
   color: #000000;
   transition: color 0.35s ease-in-out;
 }
-@supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+@supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
   .user-message-wrapper-light .user-message-content .user-info-display .user-name {
     font-size: min(5.5vw, 1.1rem);
   }
 }
 .user-message-wrapper-light .user-message-content .user-info-display .user-message-time-sent {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #baa898;
   transition: color 0.35s ease-in-out;
+  align-self: flex-start;
 }
 .user-message-wrapper-light .user-message-content .user-message {
-  margin-top: 0.25em;
+  margin-top: 0.5em;
   padding-bottom: 1em;
-  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  font-size: clamp(1rem, 3vw, 1.15rem);
   color: #000000;
   word-break: break-word;
-  padding-right: 1em;
+  padding-right: 1.1em;
   line-height: 1.55em;
   transition: color 0.35s ease-in-out;
 }
-@supports not (font-size: clamp(0.9rem, 3vw, 1.1rem)) {
+@supports not (font-size: clamp(1rem, 3vw, 1.15rem)) {
   .user-message-wrapper-light .user-message-content .user-message {
     font-size: min(5.5vw, 1.1rem);
   }
@@ -399,16 +405,30 @@
     flex-direction: row;
     align-items: center;
   }
+  .user-message-wrapper-dark .user-message-content .user-info-display .user-name {
+    padding-right: 0em;
+  }
   .user-message-wrapper-dark .user-message-content .user-info-display .user-message-time-sent {
     margin-left: 0.5em;
+    align-self: center;
+  }
+  .user-message-wrapper-dark .user-message-content .user-message {
+    margin-top: 0.3em;
   }
 
   .user-message-wrapper-light .user-message-content .user-info-display {
     flex-direction: row;
     align-items: center;
   }
+  .user-message-wrapper-light .user-message-content .user-info-display .user-name {
+    padding-right: 0em;
+  }
   .user-message-wrapper-light .user-message-content .user-info-display .user-message-time-sent {
     margin-left: 0.5em;
+    align-self: center;
+  }
+  .user-message-wrapper-light .user-message-content .user-message {
+    margin-top: 0.3em;
   }
 }
 .bg-dark {

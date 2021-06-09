@@ -3,7 +3,6 @@ import { DarkModeContext, ToggleDarkModeContext } from "../pages/_app";
 import WebLogo from "../assets/web-logo.svg";
 import SunLight from "../assets/sunlight.svg";
 import MoonDark from "../assets/moondark.svg";
-import Image from "next/image";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
@@ -40,10 +39,10 @@ function SignIn({ signInWithgoogle }) {
         }
       >
         <div>
-          <Image
+          <img
             src={WebLogo}
-            height={55}
-            width={55}
+            height="55"
+            width="55"
             className={signInStyles["sign-in-logo"]}
           />
         </div>
@@ -61,9 +60,9 @@ function SignIn({ signInWithgoogle }) {
         <div className={signInStyles["sign-in-darkmode-toggle"]}>
           <IconButton onClick={toggleDarkMode}>
             {darkMode ? (
-              <Image src={MoonDark} height={45} width={45} />
+              <img src={MoonDark} height="45" width="45" />
             ) : (
-              <Image src={SunLight} height={45} width={45} />
+              <img src={SunLight} height="45" width="45" />
             )}
           </IconButton>
         </div>
