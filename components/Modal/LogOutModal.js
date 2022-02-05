@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import { DarkModeContext } from "../../pages/_app";
 import Button from "@material-ui/core/Button";
 import { withStyles } from "@material-ui/core/styles";
-import modalStyles from "../../styles/Home.module.scss";
+import modalStyles from "../../styles/Modal/LogOutModal.module.scss";
 
 const YesButton = withStyles(() => ({
   root: {

@@ -9,12 +9,12 @@ import SignIn from "../components/SignIn";
 import Initializing from "../components/Initializing";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDi-PRr7ElLLkDkmYDQiCzdmWuVGRN925E",
-  authDomain: "next-chat-app-75531.firebaseapp.com",
-  projectId: "next-chat-app-75531",
-  storageBucket: "next-chat-app-75531.appspot.com",
-  messagingSenderId: "928638721131",
-  appId: "1:928638721131:web:8f8a0480f0e227b044e52e",
+  apiKey: process.env.NEXT_PUBLIC_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
 };
 
 if (!firebase.apps.length) {

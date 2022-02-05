@@ -8,7 +8,7 @@ import Button from "@material-ui/core/Button";
 import LogOutModal from "../Modal/LogOutModal";
 import IconButton from "@material-ui/core/IconButton";
 import { DarkModeContext, ToggleDarkModeContext } from "../../pages/_app";
-import navStyles from "../../styles/Home.module.scss";
+import navStyles from "../../styles/Navbar/Navbar.module.scss";
 
 const LogOutButton = withStyles(() => ({
   root: {

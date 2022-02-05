@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { DarkModeContext } from "../pages/_app";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { makeStyles } from "@material-ui/core/styles";
-import inittializingStyles from "../styles/Home.module.scss";
+import inittializingStyles from "../styles/Initializing.module.scss";
 
 const useStyles = makeStyles((theme) => ({
   root: {

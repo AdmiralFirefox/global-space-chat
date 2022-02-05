@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { DarkModeContext } from "../pages/_app";
 import firebase from "firebase/app";
 import Message from "./Message";
-import channelStyles from "../styles/Home.module.scss";
 import SendMessageForm from "./SendMessageForm";
+import channelStyles from "../styles/Channel.module.scss";
 
 const Channel = ({ user = null, db = null }) => {
   const dummy = useRef();
@@ -40,20 +40,6 @@ const Channel = ({ user = null, db = null }) => {
       return unsubscribe;
     }
   }, [db]);
-
-  //   Use this code in your Firebase Rules to render the messages from your data base
-  {
-    /*     
-    rules_version = '2';
-    service cloud.firestore {
-      match /databases/{database}/documents {
-        match /{document=**} {
-          allow read, write: if request.auth != null;
-        }
-      }
-    }
-*/
-  }
 
   const handleOnChange = (e) => {
     setNewMessage(e.target.value);

@@ -8,7 +8,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 import IconButton from "@material-ui/core/IconButton";
 import Sunlight from "../../assets/sunlight.svg";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import navbarContentStyles from "../../styles/Home.module.scss";
+import navbarContentStyles from "../../styles/Navbar/NavbarContent.module.scss";
 
 const useStyles = makeStyles({
   list: {

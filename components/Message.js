@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { DarkModeContext } from "../pages/_app";
 import { formatRelative } from "date-fns";
 import CardActionArea from "@material-ui/core/CardActionArea";
-import messageStyles from "../styles/Home.module.scss";
 import CopyMenu from "./Menu/CopyMenu";
+import messageStyles from "../styles/Message.module.scss";
 
 const Message = ({
   createdAt = null,

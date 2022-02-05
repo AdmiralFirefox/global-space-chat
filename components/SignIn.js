@@ -6,7 +6,7 @@ import MoonDark from "../assets/moondark.svg";
 import IconButton from "@material-ui/core/IconButton";
 import { withStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
-import signInStyles from "../styles/Home.module.scss";
+import signInStyles from "../styles/SignIn.module.scss";
 
 const SignInButton = withStyles(() => ({
   root: {
